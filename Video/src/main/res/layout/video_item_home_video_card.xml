@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/common_padding"
+    android:paddingStart="@dimen/common_padding"
+    android:paddingTop="@dimen/common_padding">
+
+    <!--视频 首页 card-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_200"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/color_ffffff"
+        app:cardCornerRadius="@dimen/dimen_6"
+        app:cardElevation="@dimen/dimen_2">
+
+        <ImageView
+            android:id="@+id/mVideoBackgroundIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:src="@drawable/splash_bg"/>
+
+        <ImageView
+            android:id="@+id/mVideoLabelIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_daily_label"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/mVideoDurationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/common_margin_middle"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:background="@drawable/shape_video_duration_textview"
+            android:padding="@dimen/dimen_3"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/font_size_12"
+            tools:text="06:12"/>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_middle">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mAuthorIconIv"
+            android:layout_width="@dimen/dimen_45"
+            android:layout_height="@dimen/dimen_45"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_icon_load_error"/>
+
+        <TextView
+            android:id="@+id/mVideoTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:layout_toEndOf="@+id/mAuthorIconIv"
+            android:ellipsize="end"
+            android:fontFamily="@font/lanting_crude"
+            android:maxLines="1"
+            android:textColor="@color/color_424542"
+            android:textSize="@dimen/font_size_14"
+            tools:text="泰国神脑洞：如何让一加一大于二"/>
+
+        <TextView
+            android:id="@+id/mVideoTitleDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mVideoTitleTv"
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:layout_toEndOf="@+id/mAuthorIconIv"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_8C8A8C"
+            android:textSize="@dimen/font_size_12"
+            tools:text="开眼广告精选 / #广告"/>
+
+        <ImageView
+            android:id="@+id/mShareIv"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="@dimen/dimen_25"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/common_margin_middle"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_share"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/common_margin_middle"
+        android:background="@color/color_dadada"/>
+
+</LinearLayout>

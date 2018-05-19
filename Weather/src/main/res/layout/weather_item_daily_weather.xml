@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/dimen_60"
+             tools:background="@color/color_1e1e1e">
+
+    <!--7天 天气  item-->
+    <TextView
+        android:id="@+id/tv_weather_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/lanting_crude"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_16"
+        tools:text="6月23日明天"/>
+
+    <ImageView
+        android:id="@+id/iv_weather_img"
+        android:layout_width="@dimen/dimen_35"
+        android:layout_height="@dimen/dimen_35"
+        android:layout_gravity="center_vertical|center"
+        android:scaleType="fitXY"
+        tools:src="@drawable/ic_icon_load_error"/>
+
+    <TextView
+        android:id="@+id/tv_low_high_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_16"
+        tools:text="37°C/22°C"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="bottom"
+        android:background="@color/color_949494"/>
+
+</FrameLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mSplashView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xfhy.life.ui.activity.SplashActivity">
+
+    <!--启动页-->
+
+    <TextView
+        android:id="@+id/mJumpOverTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/dimen_10"
+        android:background="@drawable/shape_55000000_corner"
+        android:padding="@dimen/dimen_10"
+        android:text="跳过4"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"/>
+
+    <TextView
+        android:id="@+id/mSplashTextTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="@dimen/dimen_30"
+        android:layout_marginStart="@dimen/dimen_20"
+        android:text="@string/app_intro"
+        android:textColor="@color/color_ffffff"
+        android:textSize="25sp"/>
+
+</FrameLayout>

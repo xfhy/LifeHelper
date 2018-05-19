@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">User</string>
+    <string name="register_activity_label">注册</string>
+</resources>

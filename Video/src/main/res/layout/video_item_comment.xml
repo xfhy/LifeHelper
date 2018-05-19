@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/common_padding"
+                android:paddingTop="@dimen/common_padding"
+                tools:background="@color/color_1e1e1e">
+
+    <!--评论列表-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mReplyUserIconCIV"
+        android:layout_width="@dimen/dimen_30"
+        android:layout_height="@dimen/dimen_30"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/splash_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/mReplyUserIconCIV"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/common_padding">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/font_size_14"
+            tools:text="皮卡尔"/>
+
+        <TextView
+            android:id="@+id/tv_reply_user_name_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common_padding_small"
+            android:textColor="@color/color_949494"
+            android:textSize="@dimen/font_size_13"
+            android:visibility="gone"
+            tools:text="回复:刘开心"/>
+
+        <TextView
+            android:id="@+id/tv_comment_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common_padding_small"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/font_size_14"
+            tools:text="滴滴答答嘟嘟"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_parent_reply_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_light_dark"
+            android:padding="@dimen/common_padding_small"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_reply_user_icon"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_30"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/splash_bg"/>
+
+            <TextView
+                android:id="@+id/tv_reply_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iv_reply_user_icon"
+                android:paddingStart="@dimen/common_padding_small"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/font_size_12"
+                tools:text="刘开心"/>
+
+            <TextView
+                android:id="@+id/tv_reply_user_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_reply_user_name"
+                android:layout_toEndOf="@+id/iv_reply_user_icon"
+                android:paddingStart="@dimen/common_padding_small"
+                android:paddingTop="@dimen/common_padding_small"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/font_size_12"
+                tools:text="生活大爆炸再也没有xx"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_comment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/common_padding_small"
+            android:paddingTop="@dimen/common_padding_small"
+            android:textColor="@color/color_949494"
+            android:textSize="@dimen/font_size_12"
+            tools:text="2018/03/17"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_cdcdcd"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:drawableEnd="@drawable/icon_comment_like"
+        android:drawablePadding="@dimen/common_padding_small"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_12"
+        tools:text="16"
+        tools:ignore="RelativeOverlap"/>
+
+</RelativeLayout>

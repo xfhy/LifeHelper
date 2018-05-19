@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--标题栏折叠字体大小-->
+    <style name="CollapsedTitleStyle">
+        <item name="android:textSize">@dimen/font_size_24</item>
+        <item name="android:fontFamily">@font/lanting_crude</item>
+    </style>
+
+    <!--标题栏展开字体大小-->
+    <style name="ExpandedTitleStyle">
+        <item name="android:textSize">@dimen/font_size_22</item>
+        <item name="android:fontFamily">@font/lanting_crude</item>
+    </style>
+
+    <style name="VideoDetailsStyle" parent="AppTheme">
+        <item name="colorPrimary">@color/common_black</item>
+        <item name="colorPrimaryDark">@color/common_black</item>
+        <item name="colorAccent">@color/common_black</item>
+    </style>
+
+
+</resources>

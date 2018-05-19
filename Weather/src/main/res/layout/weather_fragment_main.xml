@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--背景图-->
+    <ImageView
+        android:id="@+id/mWeatherBgIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_bg"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/mSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <ScrollView
+            android:id="@+id/mWeatherLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:scrollbarSize="0dp"
+            android:scrollbars="none">
+
+
+            <!--天气数据-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mLocateCityTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/icon_locate"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:padding="@dimen/dimen_10"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="@dimen/font_size_20"
+                        tools:text="北京"/>
+
+                </FrameLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_200">
+
+                    <!--当前温度-->
+                    <TextView
+                        android:id="@+id/mCurrentTempTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dimen_40"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="@dimen/font_size_36"/>
+
+                    <!--天气-->
+                    <TextView
+                        android:id="@+id/mWeatherTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mCurrentTempTv"
+                        android:layout_centerHorizontal="true"
+                        android:padding="@dimen/common_padding_small"
+                        android:paddingTop="@dimen/common_padding_middle"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="@dimen/font_size_20"/>
+
+                    <!--温度-->
+                    <TextView
+                        android:id="@+id/mLowHighTempTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mWeatherTv"
+                        android:layout_centerHorizontal="true"
+                        android:padding="@dimen/common_padding_small"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="@dimen/font_size_18"/>
+
+                    <!--空气质量-->
+                    <TextView
+                        android:id="@+id/mAirQualityTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mLowHighTempTv"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="@dimen/font_size_18"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mUpdateTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/common_padding_middle"
+                    android:textColor="@color/color_949494"
+                    android:textSize="@dimen/font_size_12"/>
+
+                <include layout="@layout/weather_layout_line"/>
+
+                <!--24小时天气-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mHourWeatherRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_100"
+                    android:layout_marginStart="@dimen/common_padding_middle"
+                    android:orientation="horizontal"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+                <include layout="@layout/weather_layout_line"/>
+
+                <!--7天天气-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mDailyWeatherRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/common_padding_middle"
+                    android:layout_marginStart="@dimen/common_padding_middle"/>
+
+                <include layout="@layout/weather_layout_aqi"/>
+
+                <include layout="@layout/weather_layout_life_advice"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</FrameLayout>
+

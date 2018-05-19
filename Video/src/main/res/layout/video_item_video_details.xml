@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_100"
+                android:paddingEnd="@dimen/common_padding"
+                android:paddingStart="@dimen/common_padding"
+                tools:background="@color/color_1e1e1e">
+
+    <!--视频详情相关推荐 item-->
+    <ImageView
+        android:id="@+id/iv_video_cover"
+        android:layout_width="@dimen/dimen_150"
+        android:layout_height="@dimen/dimen_80"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/splash_bg"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iv_video_cover"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/common_padding">
+
+        <TextView
+            android:id="@+id/tv_video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/font_size_14"
+            tools:text="搭把手"/>
+
+        <TextView
+            android:id="@+id/tv_video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common_padding_small"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/font_size_12"
+            tools:text="#生活"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ffffff"/>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.xfhy.video">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".activity.TypeDetailsListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.VideoDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoDetailsStyle"/>
+        <activity
+            android:name=".activity.VideoSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoDetailsStyle"/>
+    </application>
+
+</manifest>

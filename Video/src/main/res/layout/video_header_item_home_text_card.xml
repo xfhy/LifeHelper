@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mVideoHeaderTv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/lanting_crude"
+    android:paddingStart="@dimen/common_margin"
+    android:paddingTop="@dimen/dimen_15"
+    android:textColor="@color/color_424542"
+    android:textSize="@dimen/font_size_20"
+    tools:text="03/10 2018">
+
+    <!--视频 首页 文字 card-->
+
+</TextView>

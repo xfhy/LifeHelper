@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/dimen_60"
+             android:background="@color/color_ffffff">
+
+    <!--新闻 排序 item-->
+    <TextView
+        android:id="@+id/mNewsTypeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/common_padding"
+        android:drawableStart="@drawable/ic_drag"
+        android:paddingStart="@dimen/common_padding"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="@dimen/font_size_20"
+        tools:text="头条"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/mTypeCheckedSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="@dimen/common_padding"/>
+
+</FrameLayout>

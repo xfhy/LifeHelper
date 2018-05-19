@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/dimen_45">
+
+    <!--知乎日报首页header-->
+    <TextView
+        android:id="@+id/tv_latest_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:background="@color/fragment_background"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_header"
+        android:textSize="@dimen/font_size_14"/>
+
+</FrameLayout>

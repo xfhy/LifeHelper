@@ -1,0 +1,78 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'bugly'
+
+bugly {
+    appId = "${bugly_app_id}"
+    appKey = "${bugly_app_key}"
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion //基于哪个构建工具版本进行构建的
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion    //最小能支持的系统版本号
+        targetSdkVersion rootProject.ext.targetSdkVersion  //最佳支持的系统版本号
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            //bmob application_id
+            buildConfigField "String", "BMOB_APP_KEY", '"6a47878e00709ee3cb146de25bc4732f"'
+            buildConfigField "String", "ZHIHU_BASE_URL", '"https://news-at.zhihu.com/api/4/"'
+            buildConfigField "String", "VIDEO_BASE_WANDOUJIA_URL", '"http://baobab.wandoujia.com/api/"'
+            buildConfigField "String", "VIDEO_BASE_KAIYAN_URL", '"http://baobab.kaiyanapp.com/api/"'
+            buildConfigField "String", "NEWS_BASE_URL", '"http://jisunews.market.alicloudapi.com/"'
+            buildConfigField "String", "NEWS_ALIYUN_APP_CODE", '"d31030b7e58b409a91bfc43aba06658b"'
+            buildConfigField "String", "GANK_BASE_URL", '"http://gank.io/api/"'
+            buildConfigField "String", "JOKE_TEXT_BASE_URL", '"http://s.budejie.com/"'
+            buildConfigField "String", "JOKE_VIDEO_BASE_URL", '"http://d.api.budejie.com/"'
+            buildConfigField "String", "WEATHER_BASE_URL", '"http://jisutqybmf.market.alicloudapi.com/"'
+            buildConfigField "String", "BING_BASE_URL", '"https://cn.bing.com/"'
+            buildConfigField "String", "LIFE_HELPER_BASE_URL", '"http://118.24.15.117:8085/"'
+            buildConfigField "String", "BUGLY_APP_ID", '"7e3cc90a65"'
+            buildConfigField "String", "KINGSOFT_BASE_URL", '"http://open.iciba.com/"'
+        }
+        debug {
+            //log 开关
+            buildConfigField("boolean", "LOG_DEBUG", "true")
+            //bmob application_id
+            buildConfigField "String", "BMOB_APP_KEY", '"6a47878e00709ee3cb146de25bc4732f"'
+            buildConfigField "String", "ZHIHU_BASE_URL", '"https://news-at.zhihu.com/api/4/"'
+            buildConfigField "String", "VIDEO_BASE_WANDOUJIA_URL", '"http://baobab.wandoujia.com/api/"'
+            buildConfigField "String", "VIDEO_BASE_KAIYAN_URL", '"http://baobab.kaiyanapp.com/api/"'
+            buildConfigField "String", "NEWS_BASE_URL", '"http://jisunews.market.alicloudapi.com/"'
+            buildConfigField "String", "NEWS_ALIYUN_APP_CODE", '"d31030b7e58b409a91bfc43aba06658b"'
+            buildConfigField "String", "GANK_BASE_URL", '"http://gank.io/api/"'
+            buildConfigField "String", "JOKE_TEXT_BASE_URL", '"http://s.budejie.com/"'
+            buildConfigField "String", "JOKE_VIDEO_BASE_URL", '"http://d.api.budejie.com/"'
+            buildConfigField "String", "WEATHER_BASE_URL", '"http://jisutqybmf.market.alicloudapi.com/"'
+            buildConfigField "String", "BING_BASE_URL", '"https://cn.bing.com/"'
+            buildConfigField "String", "LIFE_HELPER_BASE_URL", '"http://118.24.15.117:8085/"'
+            buildConfigField "String", "BUGLY_APP_ID", '"7e3cc90a65"'
+            buildConfigField "String", "KINGSOFT_BASE_URL", '"http://open.iciba.com/"'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.android.support:appcompat-v7:$appcompat_v7_version"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    compile project(":HelperLibrary")
+}

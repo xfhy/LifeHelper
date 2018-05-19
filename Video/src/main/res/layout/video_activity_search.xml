@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_ffffff"
+              android:orientation="vertical">
+
+    <!--视频搜索页-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_padding_small"
+        android:paddingEnd="@dimen/common_padding_small"
+        android:paddingStart="@dimen/common_padding"
+        android:paddingTop="@dimen/common_padding_small">
+
+        <com.xfhy.library.widgets.EditTextWithDelete
+            android:id="@+id/mSearchEtwd"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_35"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/mCancelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_small"
+            android:text="取消"
+            android:textColor="@color/color_949494"
+            android:textSize="@dimen/font_size_14"/>
+
+    </LinearLayout>
+
+    <!--关键词固有列表-->
+    <LinearLayout
+        android:id="@+id/mFixedHotKeyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lanting_crude"
+            android:paddingBottom="@dimen/dimen_20"
+            android:paddingStart="@dimen/common_padding"
+            android:paddingTop="@dimen/dimen_40"
+            android:text="热搜关键词"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="@dimen/font_size_20"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mHotKeyRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/video_item_hot_search_key"/>
+
+    </LinearLayout>
+
+    <!--搜索出来的视频列表-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mSearchVideoRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:listitem="@layout/video_item_home_video_card"/>
+
+</LinearLayout>

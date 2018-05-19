@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_100"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/dimen_10"
+    android:layout_marginEnd="@dimen/dimen_10"
+    android:layout_marginStart="@dimen/dimen_10"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/color_ffffff"
+    app:cardCornerRadius="@dimen/dimen_4"
+    app:cardElevation="@dimen/dimen_2">
+
+    <!-- 知乎通用日报列表布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_13"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_news_image_latest"
+            android:layout_width="@dimen/dimen_90"
+            android:layout_height="@dimen/dimen_75"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_news_title_latest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimen_13"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="@dimen/font_size_16"
+            tools:text="震惊........"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

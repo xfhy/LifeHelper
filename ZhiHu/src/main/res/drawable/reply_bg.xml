@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <solid android:color="@color/comment_reply"/>
+        </shape>
+    </item>
+
+    <item android:left="@dimen/dimen_2">
+        <shape>
+            <solid android:color="@color/fragment_background"/>
+        </shape>
+    </item>
+
+</layer-list>

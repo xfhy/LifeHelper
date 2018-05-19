@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:orientation="vertical">
+
+    <!--知乎专栏详情列表-->
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <include layout="@layout/layout_refresh_common_list"/>
+
+</LinearLayout>

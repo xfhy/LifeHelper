@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ZhiHu</string>
+    <string name="stfEmptyMessage">咦,没有数据可以显示....请尝试下拉刷新一下</string>
+    <string name="stfButtonRetry">重试</string>
+    <string name="stfOfflineMessage">网络不给力,请检查网络设置</string>
+    <string name="stfButtonSetting">去设置</string>
+    <string name="stfErrorMessageNormal">加载数据失败...</string>
+
+    <string name="daily_bottom_like">点赞</string>
+    <string name="daily_bottom_comment">评论</string>
+    <string name="daily_bottom_share">分享</string>
+    <string name="daily_bottom_omitted">...</string>
+</resources>

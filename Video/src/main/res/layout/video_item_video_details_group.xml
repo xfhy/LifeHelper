@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/tv_video_item_group_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:drawableEnd="@drawable/icon_video_details"
+          android:drawablePadding="@dimen/dimen_5"
+          android:padding="@dimen/common_padding"
+          android:textColor="@color/color_ffffff"
+          android:textSize="@dimen/font_size_14">
+
+    <!--视频详情 相关推荐 分组 组头-->
+
+</TextView>

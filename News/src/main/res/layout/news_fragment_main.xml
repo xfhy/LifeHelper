@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_blue"
+              android:orientation="vertical">
+
+    <!--新闻主页-->
+
+    <!--上面的顶部标题栏-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/mTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginEnd="@dimen/common_margin"
+            app:tabBackground="@color/colorPrimary"
+            app:tabIndicatorColor="@color/color_ffffff"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/color_ffffff"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabTextColor="@color/color_translucent_white"/>
+
+        <ImageView
+            android:id="@+id/mSortTypeIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/common_margin_small"
+            android:src="@drawable/icon_unfold"/>
+
+    </FrameLayout>
+
+    <!--用于盛放不同的板块-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

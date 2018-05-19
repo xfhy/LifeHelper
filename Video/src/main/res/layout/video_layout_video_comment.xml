@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_1e1e1e"
+              android:orientation="vertical">
+
+    <!--评论列表View-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60"
+        android:paddingEnd="@dimen/common_padding"
+        android:paddingStart="@dimen/common_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="评论"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/font_size_14"/>
+
+        <ImageView
+            android:id="@+id/mCloseViewIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:padding="@dimen/common_padding_small"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_comment_down"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_ffffff"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mCommentRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/common_padding"
+        android:paddingStart="@dimen/common_padding"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:listitem="@layout/video_item_comment"/>
+
+</LinearLayout>

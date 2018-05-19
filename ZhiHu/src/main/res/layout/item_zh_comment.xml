@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_10"
+    android:background="@color/fragment_background"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <!--知乎评论列表item-->
+
+    <!--头像-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_comment_avatar"
+        android:layout_width="@dimen/dimen_40"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:src="@drawable/default_author"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--用户昵称-->
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/daily_bottom_omitted"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="@dimen/font_size_16"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/civ_comment_avatar"
+        app:layout_constraintTop_toTopOf="@id/civ_comment_avatar"/>
+
+    <!--
+        内容
+    0dp占满这个区域-->
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:gravity="start"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/daily_bottom_omitted"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_author"
+        app:layout_constraintTop_toBottomOf="@id/civ_comment_avatar"/>
+
+    <!--回复内容-->
+    <TextView
+        android:id="@+id/tv_comment_reply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:background="@drawable/reply_bg"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="2"
+        android:paddingStart="@dimen/dimen_10"
+        android:textColor="@color/comment_reply"
+        android:textSize="@dimen/font_size_16"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/tv_content"
+        app:layout_constraintStart_toStartOf="@id/tv_author"
+        app:layout_constraintTop_toBottomOf="@id/tv_content"/>
+
+    <!--时间-->
+    <TextView
+        android:id="@+id/tv_comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="00-00 00:00"
+        android:textColor="@color/gray_bfbfbf"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintStart_toStartOf="@id/tv_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_comment_reply"/>
+
+    <!--展开收缩-->
+    <TextView
+        android:id="@+id/tv_comment_expand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20"
+        android:text="展开"
+        android:textColor="@color/gray_bfbfbf"
+        android:textSize="@dimen/font_size_16"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/tv_comment_time"
+        app:layout_constraintTop_toTopOf="@id/tv_comment_time"/>
+
+</android.support.constraint.ConstraintLayout>

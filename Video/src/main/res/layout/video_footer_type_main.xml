@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/dimen_150">
+
+    <!--视频 分类 footer-->
+
+    <TextView
+        android:id="@+id/mEndViewTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/lobster1"
+        android:text="@string/the_end"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="@dimen/font_size_16"/>
+
+</FrameLayout>

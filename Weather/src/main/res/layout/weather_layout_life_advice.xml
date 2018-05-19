@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/common_padding_middle"
+              android:background="@drawable/shape_weather_common_bg"
+              android:orientation="vertical"
+              android:padding="@dimen/common_padding_middle">
+
+    <!--生活建议-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lanting_crude"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_18"
+        android:text="生活建议"/>
+
+    <TextView
+        android:id="@+id/mAirConditioningTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"
+        tools:text="空调指数: 您将感到很舒适，一般不需要开启空调。"/>
+
+    <TextView
+        android:id="@+id/mSportIndexTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"
+        tools:text="运动指数: 您将感到很舒适，一般不需要开启空调。"/>
+
+    <TextView
+        android:id="@+id/mUVRaysIndexTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"
+        tools:text="紫外线指数: 您将感到很舒适，一般不需要开启空调。"/>
+
+    <TextView
+        android:id="@+id/mColdIndexTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"
+        tools:text="感冒指数: 您将感到很舒适，一般不需要开启空调。"/>
+
+    <TextView
+        android:id="@+id/mCarWashIndexTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"
+        tools:text="洗车指数: 您将感到很舒适，一般不需要开启空调。"/>
+
+    <TextView
+        android:id="@+id/mAirPollutionIndexTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"
+        tools:text="空气污染扩散指数: 您将感到很舒适，一般不需要开启空调。"/>
+
+    <TextView
+        android:id="@+id/mDressingIndexTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"
+        tools:text="穿衣指数: 您将感到很舒适，一般不需要开启空调。"/>
+
+</LinearLayout>

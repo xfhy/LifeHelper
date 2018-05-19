@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--收藏按钮的selector-->
+    <item android:drawable="@drawable/ic_toolbar_like_solid" android:state_pressed="true"/>
+    <item android:drawable="@drawable/ic_toolbar_like_solid" android:state_selected="true"/>
+    <item android:drawable="@drawable/ic_toolbar_like_h" android:state_pressed="false"/>
+
+</selector>

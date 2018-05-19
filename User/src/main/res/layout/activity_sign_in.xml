@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DayStateTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/color_1e1e1e"
+    tools:context="com.xfhy.userfo.activity.SignInActivity">
+
+    <!--签到-->
+    <ImageView
+        android:id="@+id/mSignInBgIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/mCloseIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dimen_30"
+        android:paddingEnd="@dimen/dimen_30"
+        android:paddingStart="@dimen/dimen_30"
+        android:paddingTop="@dimen/dimen_50"
+        app:srcCompat="@drawable/ic_icon_close_day_statement"/>
+
+    <!--中间布局-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mCloseIv"
+        android:layout_marginBottom="@dimen/dimen_50"
+        android:layout_marginEnd="@dimen/dimen_30"
+        android:layout_marginStart="@dimen/dimen_30"
+        android:background="@color/color_ffffff"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_8">
+
+        <LinearLayout
+            android:id="@+id/mCenterViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6">
+
+                <ImageView
+                    android:id="@+id/mDayPicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/mDayOfMonthTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dimen_30"
+                    android:layout_marginStart="@dimen/dimen_20"
+                    android:fontFamily="@font/lanting_crude"
+                    android:paddingEnd="@dimen/dimen_8"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/font_size_26"
+                    tools:text="04"/>
+
+                <View
+                    android:id="@+id/view_center_view_line"
+                    android:layout_width="@dimen/dimen_1"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_alignTop="@+id/mDayOfMonthTv"
+                    android:layout_marginTop="@dimen/dimen_3"
+                    android:layout_toRightOf="@+id/mDayOfMonthTv"
+                    android:background="@color/color_ffffff"/>
+
+                <TextView
+                    android:id="@+id/mMonthTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/view_center_view_line"
+                    android:layout_toRightOf="@+id/view_center_view_line"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/font_size_10"
+                    tools:text="Apr."/>
+
+                <TextView
+                    android:id="@+id/mDayOfWeekTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mMonthTv"
+                    android:layout_toRightOf="@+id/view_center_view_line"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/font_size_10"
+                    tools:text="Wednesday"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="@dimen/common_padding"
+                    android:text="词霸每日一句"
+                    android:textColor="@color/color_1e1e1e"
+                    android:textSize="@dimen/font_size_14"/>
+
+                <TextView
+                    android:id="@+id/mStateContentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mTitleTv"
+                    android:padding="@dimen/common_padding"
+                    android:textColor="@color/color_1e1e1e"
+                    android:textSize="@dimen/font_size_12"
+                    tools:text="Love is the power to see similarity in the dissimilar.--在差异中寻求彼此的共同点,这就是爱。"/>
+
+                <ImageView
+                    android:id="@+id/mShareStateIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dimen_20"
+                    app:srcCompat="@drawable/user_icon_share_black"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

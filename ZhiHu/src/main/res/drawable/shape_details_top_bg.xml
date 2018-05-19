@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        知乎详情页顶部背景
+        android:angle="90"  渐变的角度
+    -->
+    <gradient
+        android:angle="90"
+        android:endColor="@android:color/transparent"
+        android:startColor="@color/color_1e1e1e"/>
+
+</shape>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_180"
+    android:background="@drawable/drawer_bg">
+
+    <!--drawer 的header-->
+
+    <!--用户头像-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mUserIconIv"
+        android:layout_width="@dimen/dimen_80"
+        android:layout_height="@dimen/dimen_80"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_author"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:text="@string/app_name"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="@dimen/font_size_20"
+        app:layout_constraintBottom_toTopOf="@+id/tv_app_intro"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_app_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_5"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:text="@string/app_intro"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/mSignInTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_margin_middle"
+        android:layout_marginEnd="@dimen/common_margin_middle"
+        android:background="@drawable/white_shape_all_corner"
+        android:drawablePadding="@dimen/dimen_5"
+        android:drawableStart="@drawable/icon_sign_in"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dimen_3"
+        android:paddingEnd="@dimen/dimen_8"
+        android:paddingStart="@dimen/dimen_8"
+        android:paddingTop="@dimen/dimen_3"
+        android:text="签到"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

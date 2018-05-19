@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".activity.NewsDetailsActivity">
+
+    <item
+        android:id="@+id/action_browser"
+        android:icon="@drawable/icon_browser"
+        android:title="用浏览器打开"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_font_size"
+        android:icon="@drawable/icon_font_size"
+        android:title="字体大小"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/icon_share_black"
+        android:title="分享"
+        app:showAsAction="never"/>
+
+</menu>

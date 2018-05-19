@@ -1,0 +1,66 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+
+ext {
+    compileSdkVersion = 27 //基于哪个SDK编译的,这里是API LEVEL
+    buildToolsVersion = "27.0.2" //基于哪个构建工具版本进行构建的
+    minSdkVersion = 19  //最小能支持的系统版本号
+    targetSdkVersion = 27  //最佳支持的系统版本号
+    versionCode = 1 //版本号
+    versionName = '1.0' //版本名称
+}
+
+buildscript {
+    ext.appcompat_v7_version = '27.0.2'
+
+    ext.kotlin_version = '1.2.10'
+
+    ext.anko_version = '0.10.4'
+
+    ext.gson_version = '2.8.2'
+
+    ext.rxandroid_version = '2.0.1'
+    ext.rxkotlin_version = '2.2.0'
+
+    ext.ok_http_version = '3.3.1'
+    ext.retrofit_version = '2.3.0'
+
+    ext.rx_lifecycle_version = '2.2.1'
+
+    ext.glide_version = "4.6.1"
+
+    ext.logger_version = '2.1.1'
+
+    ext.arouter_api_version = '1.3.1'
+    ext.arouter_compiler_version = '1.1.4'
+
+    ext.bugly_app_id = '7e3cc90a65'
+    ext.bugly_app_key = 'f9641620-14c1-46da-b6b2-bc38f3105d66'
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.tencent.bugly:symtabfileuploader:2.1.2'
+        classpath "com.tencent.bugly:tinker-support:1.1.1"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        //Bmob的maven仓库地址--必填
+        maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

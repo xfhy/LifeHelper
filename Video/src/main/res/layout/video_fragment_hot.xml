@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_background"
+            android:scrollbarSize="0dp"
+            android:scrollbars="none">
+
+    <!--排行  3个RecyclerView-->
+    <com.xfhy.library.widgets.StatefulLayout
+        android:id="@+id/sfl_sort_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lanting_crude"
+                android:paddingBottom="@dimen/common_padding_middle"
+                android:paddingStart="@dimen/common_margin"
+                android:paddingTop="@dimen/dimen_25"
+                android:text="周排行"
+                android:textColor="@color/color_424542"
+                android:textSize="@dimen/font_size_20"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mWeekSortRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common_padding_middle"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:listitem="@layout/video_item_home_video_card"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lanting_crude"
+                android:paddingBottom="@dimen/common_padding_middle"
+                android:paddingStart="@dimen/common_margin"
+                android:paddingTop="@dimen/dimen_25"
+                android:text="月排行"
+                android:textColor="@color/color_424542"
+                android:textSize="@dimen/font_size_20"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mMonthSortRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common_padding_middle"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:listitem="@layout/video_item_home_video_card"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lanting_crude"
+                android:paddingBottom="@dimen/common_padding_middle"
+                android:paddingStart="@dimen/common_margin"
+                android:paddingTop="@dimen/dimen_25"
+                android:text="总排行"
+                android:textColor="@color/color_424542"
+                android:textSize="@dimen/font_size_20"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mAllSortRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common_padding_middle"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:listitem="@layout/video_item_home_video_card"/>
+
+        </LinearLayout>
+
+    </com.xfhy.library.widgets.StatefulLayout>
+
+</ScrollView>

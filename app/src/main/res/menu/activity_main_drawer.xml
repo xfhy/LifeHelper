@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <!--侧滑菜单-->
+    <item android:title="@string/drawer_menu_read">
+        <menu>
+            <item
+                android:id="@+id/nav_menu_zhihu"
+                android:checkable="true"
+                android:checked="true"
+                android:icon="@drawable/drawer_zhihu"
+                android:title="@string/drawer_menu_zhihu"/>
+
+            <item
+                android:id="@+id/nav_menu_video"
+                android:checkable="true"
+                android:icon="@drawable/drawer_video"
+                android:title="@string/drawer_menu_video"/>
+
+            <item
+                android:id="@+id/nav_menu_news"
+                android:checkable="true"
+                android:icon="@drawable/drawer_news"
+                android:title="@string/drawer_menu_news"/>
+
+            <item
+                android:id="@+id/nav_menu_weather"
+                android:checkable="true"
+                android:icon="@drawable/drawer_weather"
+                android:title="@string/drawer_menu_weather"/>
+
+            <item
+                android:id="@+id/nav_menu_joke"
+                android:checkable="true"
+                android:icon="@drawable/drawer_joke"
+                android:title="@string/drawer_menu_joke"/>
+            <item
+                android:id="@+id/nav_menu_gank"
+                android:checkable="true"
+                android:icon="@drawable/drawer_gank"
+                android:title="@string/drawer_menu_gank"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/drawer_menu_options">
+        <menu>
+            <item
+                android:id="@+id/nav_menu_about"
+                android:checkable="true"
+                android:icon="@drawable/drawer_about"
+                android:title="@string/drawer_menu_about"/>
+        </menu>
+    </item>
+
+</menu>

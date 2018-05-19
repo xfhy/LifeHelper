@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xfhy.userfo.activity.ResetPwdActivity">
+
+    <!--重置密码-->
+    <LinearLayout
+        android:id="@+id/mInputDataLayout"
+        style="@style/MatchWrap.Vertical"
+        android:layout_margin="@dimen/common_margin"
+        android:background="@drawable/border_corner_all">
+
+        <EditText
+            android:id="@+id/mPwdEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_height"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_pwd"
+            android:drawablePadding="@dimen/common_padding_small"
+            android:hint="请输入密码（6-20位字母或数字）"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingLeft="@dimen/common_padding_small"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="@dimen/font_size_14"/>
+
+        <View style="@style/HorizontalDivider"/>
+
+        <EditText
+            android:id="@+id/mPwdConfirmEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_height"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_pwd"
+            android:drawablePadding="@dimen/common_padding_small"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingLeft="@dimen/common_padding_small"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="@dimen/font_size_14"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mResetPwdBtn"
+        style="@style/HorizontalBtnStyle"
+        android:text="完成"/>
+
+</LinearLayout>

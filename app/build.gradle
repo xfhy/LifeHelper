@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: './LifeGradle/tinker-support.gradle'
+apply plugin: 'bugly'
+
+bugly {
+    appId = "${bugly_app_id}"
+    appKey = "${bugly_app_key}"
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion //基于哪个构建工具版本进行构建的
+
+    signingConfigs {
+
+        release {
+            storeFile file("./LifeHelperKey.jks")
+            keyAlias "xfhy"
+            keyPassword "a123456"
+            storePassword 'a123456'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.xfhy.life"
+        minSdkVersion rootProject.ext.minSdkVersion    //最小能支持的系统版本号
+        targetSdkVersion rootProject.ext.targetSdkVersion  //最佳支持的系统版本号
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        vectorDrawables.useSupportLibrary = true
+
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "a7f87bdf22ebc1e7d62a5293", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$appcompat_v7_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile project(':Provider')
+    if (isUserModel.toBoolean()) {
+        compile project(':User')
+    }
+    compile project(':ZhiHu')
+    compile project(':Video')
+    compile project(':News')
+    compile project(':Gank')
+    compile project(':Joke')
+    compile project(':Weather')
+    //jpush
+    compile 'cn.jiguang.sdk:jpush:3.1.1'
+    compile 'cn.jiguang.sdk:jcore:1.1.9'
+}

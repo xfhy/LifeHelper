@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LifeHelper</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="drawer_menu_read">菜单</string>
+    <string name="drawer_menu_zhihu">知乎日报</string>
+    <string name="drawer_menu_options">选项</string>
+    <string name="drawer_menu_video">小视频</string>
+    <string name="drawer_menu_news">新闻</string>
+    <string name="drawer_menu_weather">天气</string>
+    <string name="drawer_menu_joke">笑话</string>
+    <string name="drawer_menu_gank">干货集中营</string>
+    <string name="drawer_menu_about">关于</string>
+    <string name="drawer_menu_setting">设置</string>
+    <string name="app_intro">A pure helper App for you</string>
+</resources>

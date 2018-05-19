@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_100"
+    android:layout_marginBottom="@dimen/dimen_5"
+    android:layout_marginEnd="@dimen/dimen_10"
+    android:layout_marginStart="@dimen/dimen_10"
+    android:layout_marginTop="@dimen/dimen_5"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/color_ffffff"
+    app:cardCornerRadius="@dimen/dimen_4"
+    app:cardElevation="@dimen/dimen_2">
+
+    <!--知乎主题详情页列表item-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!--日报图片  可能没有...-->
+        <ImageView
+            android:id="@+id/iv_daily_image"
+            android:layout_width="@dimen/dimen_80"
+            android:layout_height="@dimen/dimen_80"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_daily_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_20"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="@dimen/font_size_16"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

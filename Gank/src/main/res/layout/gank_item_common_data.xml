@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_270"
+    android:layout_marginEnd="@dimen/common_margin_middle"
+    android:layout_marginStart="@dimen/common_margin_middle"
+    android:layout_marginTop="@dimen/common_margin"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/color_ffffff"
+    app:cardCornerRadius="@dimen/dimen_4"
+    app:cardElevation="@dimen/dimen_2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimen_40"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/mGankImgIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splash_bg"/>
+
+        <TextView
+            android:id="@+id/mGankTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/common_margin"
+            android:background="@drawable/shape_gank_data_transparent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="3"
+            android:paddingEnd="@dimen/common_padding_small"
+            android:paddingStart="@dimen/common_padding_small"
+            android:textColor="@color/color_ffffff"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_24"
+            tools:text="#MusicLibrary-一个丰富的音频播放SDK"/>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/mGankAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="@dimen/common_padding"
+            android:textColor="@color/color_949494"
+            android:textSize="@dimen/font_size_14"
+            tools:text="梧桐"/>
+
+        <TextView
+            android:id="@+id/mGankDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:paddingEnd="@dimen/common_padding"
+            android:textColor="@color/color_949494"
+            android:textSize="@dimen/font_size_14"
+            tools:text="2018-03-12"/>
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

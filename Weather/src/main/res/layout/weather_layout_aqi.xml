@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/common_padding_middle"
+              android:background="@drawable/shape_weather_common_bg"
+              android:orientation="vertical">
+
+    <!--aqi-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/common_padding_middle"
+        android:paddingStart="@dimen/common_padding_middle"
+        android:paddingTop="@dimen/common_padding_middle"
+        android:text="空气质量"
+        android:fontFamily="@font/lanting_crude"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_18"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="污染指数"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/font_size_14"/>
+
+            <TextView
+                android:id="@+id/mAqiTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_padding_middle"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/font_size_36"
+                tools:text="65"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PM2.5"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/font_size_14"/>
+
+            <TextView
+                android:id="@+id/mPM25Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_padding_middle"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/font_size_36"
+                tools:text="111"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mAffectTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_padding_middle"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"
+        tools:text="健康:易感人群症状有轻度加剧，健康人群出现刺激症状"/>
+
+    <TextView
+        android:id="@+id/mMeasureTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_padding_middle"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_size_14"
+        tools:text="建议:儿童、老年人及心脏病、呼吸系统疾病患者应减少长时间、高强度的户外锻炼"/>
+
+</LinearLayout>
