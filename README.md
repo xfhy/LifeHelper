@@ -1,5 +1,10 @@
 # LifeHelper
 
+![image](https://img.shields.io/badge/api-%2B19-blue.svg)
+![image](https://img.shields.io/badge/license-Apache2.0-blue.svg)
+[![image](https://img.shields.io/badge/author-xfhy-orange.svg)](https://github.com/xfhy)
+[![image](https://img.shields.io/badge/CSDN-潇风寒月-orange.svg)](https://blog.csdn.net/xfhy_)
+
 ### 1. 我的毕业设计,目前含有的主要功能如下:
 
 - 用户模块
